@@ -66,20 +66,12 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 
 
 
-**2.	DIAGRAMA ELÉCTRICO***
+**2.	DIAGRAMA ELÉCTRICO**
 
 
 
 
-
-
-
-
-
-
-
-
-**3.	LISTA DE COMPONENTES **
+**3.	LISTA DE COMPONENTES**
 
 •	Computador con  Sistema Operativo Windows 8 ó 10
 
