@@ -33,20 +33,29 @@ El PIC16F84A es un microcontrolador gama media de 8 bits que físicamente consta
 Es un programa que ha sido diseñado específicamente para profesores, estudiantes y profesionales del diseño de circuitos, hace que la creación de cualquier circuito eléctrico se convierta en un proceso sencillo, con la posibilidad de añadir cualquier elemento a los circuitos. Por tanto, si eres un estudiante y quieres tener acceso a uno de los mejores programas del sector para la creación de circuitos eléctricos, descarga e instala NI Multisim Student Edition en tu ordenador.
 
 
-**¿Dónde puedo instalar NI MULTISIM 14.0?**
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a7.jpg)
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a4.jpg)
+
+**¿Dónde puedo instalar NI MULTISIM 14.0?**
 
 
 NI MULTISIM es compatible con las siguientes plataformas:
-o	Sistema Operativo Windows® 10 Windows® 8 / 8.1 Windows® 7, XP
-o	128 MB MEMORIA RAM
-o	Tarjeta de Video Integral
-o	Tarjeta de Sonido 5.1
-o	2000 Megas Espacio Disco Duro
-o	Procesador 2.3Ghz dual core
-o	Monitor VGA
-o	Conexión a Internet
+
+- Sistema Operativo Windows® 10 Windows® 8 / 8.1 Windows® 7, XP
+
+- 128 MB MEMORIA RAM
+
+- Tarjeta de Video Integral
+
+- Tarjeta de Sonido 5.1
+
+- 2000 Megas Espacio Disco Duro
+
+- 	Procesador 2.3Ghz dual core
+
+- Monitor VGA
+
+- Conexión a Internet
 
 
 **D.	MÓDULO ENSAMBLADOR EN MULTISIM**
@@ -55,27 +64,27 @@ El único lenguaje que entienden los micro controladores es el código de máqui
 
 El lenguaje ensamblador expresa las instrucciones de una forma más natural al hombre a la vez que muy cercana al micro controlador, para simular el comportamiento de un micro controlador al ejecutar un programa sencillo las instrucciones del mismo lo debemos hacer en ensamblador. 
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a5.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a4.jpg)
 
 
 **2.	DIAGRAMA ELÉCTRICO**
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a6.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a5.jpg)
 
 
 **3.	LISTA DE COMPONENTES**
 
 •	Computador con  Sistema Operativo Windows 8 ó 10
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a7.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a6.jpg)
 
 •	Software de simulación NI Multisim 14.0			
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a8.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a7.jpg)
 
 •	Módulo Ensamblador Multisim 14.0
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a9.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a8.jpg)
 
  
 **4.	EXPLICACIÓN DEL CÓDIGO FUENTE**
@@ -86,7 +95,7 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 
 <br>
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a10.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a9.jpg)
 
 
 **BLOQUE DE CONFIGURACIÓN DEL MICROCONTROLADOR**
@@ -155,19 +164,20 @@ Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares 
 
 Propiedades/compatibilidad/Nivel de privilegio/ejecutar como administrador/aplicar y aceptar
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a11.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a10.jpg)
 
 2.	Una vez ingresamos a nuestro espacio de trabajo podemos utilizar el scroll del mouse para desplazarnos con mayor facilidad y regular el zoom de la pantalla.
 
-![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a12.jpg)
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a11.jpg)
 
 
 3.	Para colocar un micro controlador PIC, nos ubicamos en la barra de herramientas en la parte superior y le damos clic en el botón MCU.
 
 Aparece una nueva ventana, seleccionamos la opción PIC16F84A le damos clic en aceptar después clic en el lugar de la pantalla donde queremos que aparezca el elemento.
 
- ![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a13.jpg)
+ ![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a12.jpg)
 
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a13.jpg)
 
 4.	En la nueva ventana que aparece colocamos el nombre de nuestro proyecto, y le damos clic en siguiente.
  
