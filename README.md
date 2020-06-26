@@ -4,6 +4,8 @@
 
 **1. MARCO TEÓRICO**
 
+<br>
+
 **A.	ARDUINO UNO**
 
 El Arduino UNO es una placa basada en un **MICROCONTROLADOR ATmega328**, cuya plataforma de creación electrónica es de código abierto, la cual está basada en hardware y software libre, flexible y fácil de utilizar para los creadores y desarrolladores. 
@@ -98,7 +100,11 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 
 **4.	EXPLICACIÓN DEL CÓDIGO FUENTE**
 
+<br>
+
 **A.	CÓDIGO FUENTE**
+
+<br>
 
 **BLOQUE DE CONFIGURACIÓN DEL MICROCONTROLADOR**
 
@@ -158,6 +164,7 @@ Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares 
  
 **END** Finaliza el proceso
 
+<br>
 
 **B.	EJECUCIÓN DEL PROYECTO** 
 
