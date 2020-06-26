@@ -181,29 +181,33 @@ Aparece una nueva ventana, seleccionamos la opción PIC16F84A le damos clic en a
  
 
 6.	Sin modificar ningún otro parámetro le damos clic en Terminar, observamos que el elemento aparece en la pantalla de simulación y  se genera una pestaña con el “nombre main.asm”.
+
+7.	En la ventana que aparece se debe pegar o escribir el código de ensamblador realizado en el inciso “4. A” de este documento, una vez ingresado el código volvemos a la pestaña anterior.
  
 
-7.	Para agregar los diferentes componentes de nuestro circuito presionamos las teclas:
+8.	Para agregar los diferentes componentes de nuestro circuito presionamos las teclas:
 Ctrl + W
 
 Una vez en la ventana de componentes nos desplazamos hacia la parte izquierda en la pestaña de “Grupo:” seleccionamos “Basic”. 
 
  
   
-8.	Una vez en la ventana “Basic” seleccionamos los elementos necesarios según el diagrama eléctrico, le damos clic en aceptar y clic en la pantalla donde queremos que aparezca el componente.
+9.	Una vez en la ventana “Basic” seleccionamos los elementos necesarios según el diagrama eléctrico, le damos clic en aceptar y clic en la pantalla donde queremos que aparezca el componente.
  
 
  
 
-9.	Si necesitamos cambiar el valor ya sea de una resistencia o de una fuente de tensión, damos doble clic sobre el elemento, escribimos el valor y clic en aceptar. Por ejemplo:
+10.	Si necesitamos cambiar el valor ya sea de una resistencia o de una fuente de tensión, damos doble clic sobre el elemento, escribimos el valor y clic en aceptar. Por ejemplo:
 100 ohmios = “100”
 1000 ohmios= “1000” ó “1k”
  
 
-10.	K
-11.	M
-12.	N
-13.	
+11.	Una vez que seleccionamos todos los elementos necesarios para el circuito realizamos las conexiones respectivas dando clic en el punto en el terminal de un elemento y llevando el puntero al terminal del otro elemento. 
+
+Para las conexiones utilizamos el Diagrama Eléctrico del inciso 2.
+
+
+12.	Como paso final le damos clic en el botón Iniciar Simulación, podemos observar que si encendemos un interruptor se va a encender el led respectivo.
 
 
  
