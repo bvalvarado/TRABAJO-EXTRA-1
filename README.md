@@ -218,5 +218,5 @@ Para las conexiones utilizamos el Diagrama Eléctrico del inciso 2.
 •	https://naylampmechatronics.com/microcontroladores/111-atmega328.html
 •	https://arduinobot.pbworks.com/f/Manual+Programacion+Arduino.pdf
 •	http://sherlin.xbot.es/microcontroladores/microcontroladores-de-gama-media/4-microcontrolador-pic-16f84
-•	https://www.ni.com/es-cr/shop/electronic-test-instrumentation/application-software-for-electronic-test 		and-	instrumentation-category/what-is-multisim.html
+•	https://www.ni.com/es-cr/shop/electronic-test-instrumentation/application-software-for-electronic-testand-instrumentation-category/what-is-multisim.html
 
