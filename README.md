@@ -109,21 +109,26 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 
 **#include "p16f84a.inc"**	Es una librería que incluye las definiciones PIC16F84A para el que el módulo ensamblador MPASM reconozca los puertos del micro controlador.
 
-**LIST P=16F04A**		Incluye todas las rutinas para poder trabajar con el microcontrolador  	
+**LIST P=16F04A**	Incluye todas las rutinas para poder trabajar con el microcontrolador  	
 
- 	**RADIX HEX**		Convierta todas las instrucciones numéricas en hexadecimales
+**RADIX HEX**		Convierta todas las instrucciones numéricas en hexadecimales
 
-**AUXILIAR EQU 0X0C**
-		ORG 0
-		GOTO INICIO
-		ORG 5
+**AUXILIAR EQU 0X0C**   Lbreria para controlar los pines del microcontrolador
 
-INICIO  BSF STATUS, RP0
-		MOVLW B'00001111'
-		MOVWF TRISB
-		BCF STATUS, RP0
+***ORG 0**          Es un vector cero o vector reset cada vez que se ejecuta el programa el contador se ubica aqui
+**GOTO INICIO**	    Vaya a una etiqueta inicio, o a la primeria ubicación del microcontrolar
+**ORG 5**        Es la posición de arranque del microcontrolador
 
-LEERPUERTO	MOVF PORTB,W
+**INICIO  BSF STATUS, RP0** Registro estado del microcontrolador, es una instrucción en ensamblador que pone un 1 en el registro específico o registro de arranque, el microcontrolador cuenta con 8 bits de registro  
+
+**MOVLW B'00001111'**
+		
+**MOVWF TRISB**
+
+**BCF STATUS, RP0**
+
+**LEERPUERTO	MOVF PORTB,W**
+
 		ANDLW 0X0F
 		MOVWF AUXILIAR
 		COMF AUXILIAR,W
