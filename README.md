@@ -19,14 +19,13 @@ Partes de una placa ARDUINO UNO
 
 ATmega328 es un microcontrolador utilizado en el Arduino UNO, con una arquitectura RISC 8-bit que le permite ejecutar instrucciones en un solo ciclo de reloj, alcanzando una potencia de 1 MIPS. Los puertos soportan un máximo de 40 mA, a pesar que lo ideal es trabajar con 20 mA. 
  
+ ![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a2.jpg)
+
 
 El PIC16F84A es un microcontrolador gama media de 8 bits que físicamente consta de 18 pines, su memoria de programa es de tipo flash, lo que nos permitirá grabarlo hasta unas 10000 veces.
  Este tipo  micro controladores  son lo más parecido a un ARDUINO UNO, son capaces de desempeñar  las mismas funciones y a ambos se los puede trabajar en LENGUAJE ENSAMBLADOR.
 
-
-
-
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a3.jpg)
 
 
 **C.	NI MULTISIM 14.0**
@@ -36,6 +35,7 @@ Es un programa que ha sido diseñado específicamente para profesores, estudiant
 
 **¿Dónde puedo instalar NI MULTISIM 14.0?**
 
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a4.jpg)
 
 
 NI MULTISIM es compatible con las siguientes plataformas:
@@ -55,48 +55,29 @@ El único lenguaje que entienden los micro controladores es el código de máqui
 
 El lenguaje ensamblador expresa las instrucciones de una forma más natural al hombre a la vez que muy cercana al micro controlador, para simular el comportamiento de un micro controlador al ejecutar un programa sencillo las instrucciones del mismo lo debemos hacer en ensamblador. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a5.jpg)
 
 
 **2.	DIAGRAMA ELÉCTRICO**
 
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a6.jpg)
 
 
 **3.	LISTA DE COMPONENTES**
 
 •	Computador con  Sistema Operativo Windows 8 ó 10
 
-
-
-
-
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a7.jpg)
 
 •	Software de simulación NI Multisim 14.0			
 
-
-
-
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a8.jpg)
 
 •	Módulo Ensamblador Multisim 14.0
 
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a9.jpg)
+
  
-
-
 **4.	EXPLICACIÓN DEL CÓDIGO FUENTE**
 
 <br>
@@ -104,6 +85,9 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 **A.	CÓDIGO FUENTE**
 
 <br>
+
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a10.jpg)
+
 
 **BLOQUE DE CONFIGURACIÓN DEL MICROCONTROLADOR**
 
@@ -171,53 +155,70 @@ Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares 
 
 Propiedades/compatibilidad/Nivel de privilegio/ejecutar como administrador/aplicar y aceptar
 
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a11.jpg)
 
 2.	Una vez ingresamos a nuestro espacio de trabajo podemos utilizar el scroll del mouse para desplazarnos con mayor facilidad y regular el zoom de la pantalla.
+
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a12.jpg)
 
 
 3.	Para colocar un micro controlador PIC, nos ubicamos en la barra de herramientas en la parte superior y le damos clic en el botón MCU.
 
 Aparece una nueva ventana, seleccionamos la opción PIC16F84A le damos clic en aceptar después clic en el lugar de la pantalla donde queremos que aparezca el elemento.
 
- 
+ ![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a13.jpg)
+
 
 4.	En la nueva ventana que aparece colocamos el nombre de nuestro proyecto, y le damos clic en siguiente.
  
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a14.jpg)
 
 
 5.	En la ventana que aparece nos ubicamos en la pestaña Lenguaje de programación, elegimos Ensamblador y en nombre del proyecto escribimos nuevamente el nombre de nuestro trabajo y le damos clic en siguiente.
  
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a15.jpg)
+
 
 6.	Sin modificar ningún otro parámetro le damos clic en Terminar, observamos que el elemento aparece en la pantalla de simulación y  se genera una pestaña con el “nombre main.asm”.
 
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a16.jpg)
+
+
 7.	En la ventana que aparece se debe pegar o escribir el código de ensamblador realizado en el inciso “4. A” de este documento, una vez ingresado el código volvemos a la pestaña anterior.
  
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a17.jpg)
+
 
 8.	Para agregar los diferentes componentes de nuestro circuito presionamos las teclas:
 Ctrl + W
 
 Una vez en la ventana de componentes nos desplazamos hacia la parte izquierda en la pestaña de “Grupo:” seleccionamos “Basic”. 
 
- 
+ ![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a18.jpg)
+
   
 9.	Una vez en la ventana “Basic” seleccionamos los elementos necesarios según el diagrama eléctrico, le damos clic en aceptar y clic en la pantalla donde queremos que aparezca el componente.
  
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a19.jpg)
  
 
 10.	Si necesitamos cambiar el valor ya sea de una resistencia o de una fuente de tensión, damos doble clic sobre el elemento, escribimos el valor y clic en aceptar. Por ejemplo:
 100 ohmios = “100”
 1000 ohmios= “1000” ó “1k”
  
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a20.jpg)
+
 
 11.	Una vez que seleccionamos todos los elementos necesarios para el circuito realizamos las conexiones respectivas dando clic en el punto en el terminal de un elemento y llevando el puntero al terminal del otro elemento. 
 
 Para las conexiones utilizamos el Diagrama Eléctrico del inciso 2.
 
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a21.jpg)
+
 
 12.	Como paso final le damos clic en el botón Iniciar Simulación, podemos observar que si encendemos un interruptor se va a encender el led respectivo.
 
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a22.jpg)
 
  
 **5.	BIBLIOGRAFÍA**
