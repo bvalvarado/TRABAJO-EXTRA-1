@@ -98,9 +98,11 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 ![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a9.jpg)
 
 
-**BLOQUE DE CONFIGURACIÓN DEL MICROCONTROLADOR**
+**- BLOQUE DE CONFIGURACIÓN DEL MICROCONTROLADOR**
 
 En esta primera parte del código configuramos al microcontrolador asignado los pines de registro y los de ejecución.
+
+<b>
 
 **#include "p16f84a.inc"**	Es una librería que incluye las definiciones PIC16F84A para el que el módulo ensamblador MPASM reconozca los puertos del micro controlador.
 
@@ -108,7 +110,11 @@ En esta primera parte del código configuramos al microcontrolador asignado los 
 
 **RADIX HEX**		Convierte todas las instrucciones numéricas en hexadecimales
 
-**BLOQUE AUXILIAR**
+<b>
+ 
+**- BLOQUE AUXILIAR**
+
+<b>
 
 En esta parte del código se definen las variables auxiliares que cumplen la función de realizar la validación de cada puerto del microcontrolador y de esta forma saber que puerto esta activo y cual no.
 
@@ -120,7 +126,9 @@ En esta parte del código se definen las variables auxiliares que cumplen la fun
 
 **ORG 5**        Es la posición de arranque del microcontrolador
 
-**BLOQUE DE INICIO**
+<b>
+ 
+**- BLOQUE DE INICIO**
 
 En esta parte se especifica los pines de salida y los pines de entrada una vez definidos estos parámetros se direcciona nuevamente al banco de trababjo 
 
@@ -132,9 +140,13 @@ En esta parte se especifica los pines de salida y los pines de entrada una vez d
 
 **BCF STATUS, RP0** Con esta instrucción se trabaja en el banco 1 de la memoria de datos
 
-**BLOQUE LEER PUERTO**
+<b>
+
+**- BLOQUE LEER PUERTO**
 
 Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares se vuelve a direccionar todo el proceso al banco 0 o banco de trabajo
+
+<b>
 
 **LEERPUERTO	MOVF PORTB,W** Con esta instrucción se leen todas las entradas
 
