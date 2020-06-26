@@ -102,7 +102,7 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 
 En esta primera parte del código configuramos al microcontrolador asignado los pines de registro y los de ejecución.
 
-<b>
+<br>
 
 **#include "p16f84a.inc"**
 
@@ -116,11 +116,11 @@ Incluye todas las rutinas para poder trabajar con el microcontrolador
 
 Convierte todas las instrucciones numéricas en hexadecimales
 
-<b>
+<br>
  
 **- BLOQUE AUXILIAR**
 
-<b>
+<br>
 
 En esta parte del código se definen las variables auxiliares que cumplen la función de realizar la validación de cada puerto del microcontrolador y de esta forma saber que puerto esta activo y cual no.
 
@@ -140,7 +140,7 @@ Vaya a una etiqueta inicio, o a la primeria ubicación del microcontrolar
 
 Es la posición de arranque del microcontrolador
 
-<b>
+<br>
  
 **- BLOQUE DE INICIO**
 
@@ -162,13 +162,13 @@ Se mueve todas las instrucciones a la memoria aleatoria del microcontrolador par
 
 Con esta instrucción se trabaja en el banco 1 de la memoria de datos
 
-<b>
+<br>
 
 **- BLOQUE LEER PUERTO**
 
 Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares se vuelve a direccionar todo el proceso al banco 0 o banco de trabajo
 
-<b>
+<br>
 
 **LEERPUERTO	MOVF PORTB,W** 
 
