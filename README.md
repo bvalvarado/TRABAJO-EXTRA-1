@@ -105,65 +105,64 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 
 **A.	CÓDIGO FUENTE**
 
- 
+**BLOQUE DE CONFIGURACIÓN DEL MICROCONTROLADOR**
+
+En esta primera parte del código configuramos al microcontrolador asignado los pines de registro y los de ejecución.
 
 **#include "p16f84a.inc"**	Es una librería que incluye las definiciones PIC16F84A para el que el módulo ensamblador MPASM reconozca los puertos del micro controlador.
 
 **LIST P=16F04A**	Incluye todas las rutinas para poder trabajar con el microcontrolador  	
 
-**RADIX HEX**		Convierta todas las instrucciones numéricas en hexadecimales
+**RADIX HEX**		Convierte todas las instrucciones numéricas en hexadecimales
+
+**BLOQUE AUXILIAR**
+
+En esta parte del código se definen las variables auxiliares que cumplen la función de realizar la validación de cada puerto del microcontrolador y de esta forma saber que puerto esta activo y cual no.
 
 **AUXILIAR EQU 0X0C**   Lbreria para controlar los pines del microcontrolador
 
 ***ORG 0**          Es un vector cero o vector reset cada vez que se ejecuta el programa el contador se ubica aqui
+
 **GOTO INICIO**	    Vaya a una etiqueta inicio, o a la primeria ubicación del microcontrolar
+
 **ORG 5**        Es la posición de arranque del microcontrolador
 
-**INICIO  BSF STATUS, RP0** Registro estado del microcontrolador, es una instrucción en ensamblador que pone un 1 en el registro específico o registro de arranque, el microcontrolador cuenta con 8 bits de registro  
+**BLOQUE DE INICIO**
 
-**MOVLW B'00001111'**
-		
-**MOVWF TRISB**
+En esta parte se especifica los pines de salida y los pines de entrada una vez definidos estos parámetros se direcciona nuevamente al banco de trababjo 
 
-**BCF STATUS, RP0**
+**INICIO  BSF STATUS, RP0**   Registro estado del microcontrolador, es una instrucción en ensamblador que pone un 1 en el registro específico o registro de arranque, el microcontrolador cuenta con 8 bits de registro  
 
-**LEERPUERTO	MOVF PORTB,W**
+**MOVLW B'00001111'** Es un registro de trabajo para ejecutar todo el repertorio de instrucciones del microcontrolador
 
-		ANDLW 0X0F
-		MOVWF AUXILIAR
-		COMF AUXILIAR,W
-		ANDLW 0X0F
-		MOVWF AUXILIAR
-		SWAPF AUXILIAR,W
-		MOVWF PORTB
-		GOTO LEERPUERTO
+**MOVWF TRISB** Se mueve todas las instrucciones a la memoria aleatoria del microcontrolador para ser configurada y después ejecutada en el banco 0
 
-	END
-		LIST P=16F04A
-		RADIX HEX
+**BCF STATUS, RP0** Con esta instrucción se trabaja en el banco 1 de la memoria de datos
 
-AUXILIAR EQU 0X0C
+**BLOQUE LEER PUERTO**
 
-		ORG 0
-		GOTO INICIO
-		ORG 5
+Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares se vuelve a direccionar todo el proceso al banco 0 o banco de trabajo
 
-INICIO  BSF STATUS, RP0
-		MOVLW B'00001111'
-		MOVWF TRISB
-		BCF STATUS, RP0
+**LEERPUERTO	MOVF PORTB,W** Con esta instrucción se leen todas las entradas
 
-LEERPUERTO	MOVF PORTB,W
-		ANDLW 0X0F
-		MOVWF AUXILIAR
-		COMF AUXILIAR,W
-		ANDLW 0X0F
-		MOVWF AUXILIAR
-		SWAPF AUXILIAR,W
-		MOVWF PORTB
-		GOTO LEERPUERTO
+**ANDLW 0X0F** Con esta linea de ejecución le indicamos al microcontrolador que para que se prenda el led tiene que existir un voltaje y estar el interruptor activado
 
-	END
+**MOVWF AUXILIAR** Variable auxiliar funciona como una conexion entre los bancos de trabajo 
+
+**COMF AUXILIAR,W** Esta variable trabaja de forma que donde el auxiliar tenga un 1 cambia a 0 , con esta intrucion realizamos el escaneo de los pines para saber cual esta activo y cual apagado
+
+**ANDLW 0X0F** Con esta linea de ejecución le indicamos al microcontrolador que para que se prenda el led tiene que existir un voltaje y estar el interruptor activado
+
+**MOVWF AUXILIAR** Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+
+**SWAPF AUXILIAR,W** Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+
+**MOVWF PORTB** Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+
+**GOTO LEERPUERTO** Despues de hacer todas las validaciones con esta instruccion se prende el led si ingresa un voltaje al puerto Y el interruptor está encendido.
+ 
+**END** Finaliza el proceso
+
 
 **B.	EJECUCIÓN DEL PROYECTO** 
 
@@ -223,5 +222,5 @@ Una vez en la ventana de componentes nos desplazamos hacia la parte izquierda en
 •	https://naylampmechatronics.com/microcontroladores/111-atmega328.html
 •	https://arduinobot.pbworks.com/f/Manual+Programacion+Arduino.pdf
 •	http://sherlin.xbot.es/microcontroladores/microcontroladores-de-gama-media/4-microcontrolador-pic-16f84
-•	https://www.ni.com/es-cr/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-	instrumentation-category/what-is-multisim.html
+•	https://www.ni.com/es-cr/shop/electronic-test-instrumentation/application-software-for-electronic-test 		and-	instrumentation-category/what-is-multisim.html
 
