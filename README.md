@@ -104,11 +104,17 @@ En esta primera parte del código configuramos al microcontrolador asignado los 
 
 <b>
 
-**#include "p16f84a.inc"**	Es una librería que incluye las definiciones PIC16F84A para el que el módulo ensamblador MPASM reconozca los puertos del micro controlador.
+**#include "p16f84a.inc"**
 
-**LIST P=16F04A**	Incluye todas las rutinas para poder trabajar con el microcontrolador  	
+Es una librería que incluye las definiciones PIC16F84A para el que el módulo ensamblador MPASM reconozca los puertos del micro controlador.
 
-**RADIX HEX**		Convierte todas las instrucciones numéricas en hexadecimales
+**LIST P=16F04A**	
+
+Incluye todas las rutinas para poder trabajar con el microcontrolador  	
+
+**RADIX HEX**		
+
+Convierte todas las instrucciones numéricas en hexadecimales
 
 <b>
  
@@ -118,13 +124,21 @@ En esta primera parte del código configuramos al microcontrolador asignado los 
 
 En esta parte del código se definen las variables auxiliares que cumplen la función de realizar la validación de cada puerto del microcontrolador y de esta forma saber que puerto esta activo y cual no.
 
-**AUXILIAR EQU 0X0C**   Lbreria para controlar los pines del microcontrolador
+**AUXILIAR EQU 0X0C**  
 
-***ORG 0**          Es un vector cero o vector reset cada vez que se ejecuta el programa el contador se ubica aqui
+Lbreria para controlar los pines del microcontrolador
 
-**GOTO INICIO**	    Vaya a una etiqueta inicio, o a la primeria ubicación del microcontrolar
+***ORG 0**          
 
-**ORG 5**        Es la posición de arranque del microcontrolador
+Es un vector cero o vector reset cada vez que se ejecuta el programa el contador se ubica aqui
+
+**GOTO INICIO**	   
+
+Vaya a una etiqueta inicio, o a la primeria ubicación del microcontrolar
+
+**ORG 5**        
+
+Es la posición de arranque del microcontrolador
 
 <b>
  
@@ -132,13 +146,21 @@ En esta parte del código se definen las variables auxiliares que cumplen la fun
 
 En esta parte se especifica los pines de salida y los pines de entrada una vez definidos estos parámetros se direcciona nuevamente al banco de trababjo 
 
-**INICIO  BSF STATUS, RP0**   Registro estado del microcontrolador, es una instrucción en ensamblador que pone un 1 en el registro específico o registro de arranque, el microcontrolador cuenta con 8 bits de registro  
+**INICIO  BSF STATUS, RP0**   
 
-**MOVLW B'00001111'** Es un registro de trabajo para ejecutar todo el repertorio de instrucciones del microcontrolador
+Registro estado del microcontrolador, es una instrucción en ensamblador que pone un 1 en el registro específico o registro de arranque, el microcontrolador cuenta con 8 bits de registro  
 
-**MOVWF TRISB** Se mueve todas las instrucciones a la memoria aleatoria del microcontrolador para ser configurada y después ejecutada en el banco 0
+**MOVLW B'00001111'** 
 
-**BCF STATUS, RP0** Con esta instrucción se trabaja en el banco 1 de la memoria de datos
+Es un registro de trabajo para ejecutar todo el repertorio de instrucciones del microcontrolador
+
+**MOVWF TRISB** 
+
+Se mueve todas las instrucciones a la memoria aleatoria del microcontrolador para ser configurada y después ejecutada en el banco 0
+
+**BCF STATUS, RP0** 
+
+Con esta instrucción se trabaja en el banco 1 de la memoria de datos
 
 <b>
 
@@ -148,25 +170,45 @@ Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares 
 
 <b>
 
-**LEERPUERTO	MOVF PORTB,W** Con esta instrucción se leen todas las entradas
+**LEERPUERTO	MOVF PORTB,W** 
 
-**ANDLW 0X0F** Con esta linea de ejecución le indicamos al microcontrolador que para que se prenda el led tiene que existir un voltaje y estar el interruptor activado
+Con esta instrucción se leen todas las entradas
 
-**MOVWF AUXILIAR** Variable auxiliar funciona como una conexion entre los bancos de trabajo
+**ANDLW 0X0F** 
 
-**COMF AUXILIAR,W** Esta variable trabaja de forma que donde el auxiliar tenga un 1 cambia a 0 , con esta intrucion realizamos el escaneo de los pines para saber cual esta activo y cual apagado
+Con esta linea de ejecución le indicamos al microcontrolador que para que se prenda el led tiene que existir un voltaje y estar el interruptor activado
 
-**ANDLW 0X0F** Con esta linea de ejecución le indicamos al microcontrolador que para que se prenda el led tiene que existir un voltaje y estar el interruptor activado
+**MOVWF AUXILIAR** 
 
-**MOVWF AUXILIAR** Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+Variable auxiliar funciona como una conexion entre los bancos de trabajo
 
-**SWAPF AUXILIAR,W** Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+**COMF AUXILIAR,W** 
 
-**MOVWF PORTB** Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+Esta variable trabaja de forma que donde el auxiliar tenga un 1 cambia a 0 , con esta intrucion realizamos el escaneo de los pines para saber cual esta activo y cual apagado
 
-**GOTO LEERPUERTO** Despues de hacer todas las validaciones con esta instruccion se prende el led si ingresa un voltaje al puerto Y el interruptor está encendido.
+**ANDLW 0X0F** 
+
+Con esta linea de ejecución le indicamos al microcontrolador que para que se prenda el led tiene que existir un voltaje y estar el interruptor activado
+
+**MOVWF AUXILIAR** 
+
+Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+
+**SWAPF AUXILIAR,W** 
+
+Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+
+**MOVWF PORTB** 
+
+Se direcciona la variable auxiliar al banco de trabajo para su ejecución
+
+**GOTO LEERPUERTO**
+
+Despues de hacer todas las validaciones con esta instruccion se prende el led si ingresa un voltaje al puerto Y el interruptor está encendido.
  
-**END** Finaliza el proceso
+**END** 
+
+Finaliza el proceso
 
 <br>
 
