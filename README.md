@@ -110,6 +110,7 @@ El lenguaje ensamblador expresa las instrucciones de una forma más natural al h
 **#include "p16f84a.inc"**	Es una librería que incluye las definiciones PIC16F84A para el que el módulo ensamblador MPASM reconozca los puertos del micro controlador.
 
 **LIST P=16F04A**		Incluye todas las rutinas para poder trabajar con el microcontrolador  	
+
  	**RADIX HEX**		Convierta todas las instrucciones numéricas en hexadecimales
 
 **AUXILIAR EQU 0X0C**
