@@ -152,7 +152,7 @@ Una vez ejecutadas todas las instrucciones asignadas a las variables auxiliares 
 
 **ANDLW 0X0F** Con esta linea de ejecución le indicamos al microcontrolador que para que se prenda el led tiene que existir un voltaje y estar el interruptor activado
 
-**MOVWF AUXILIAR** Variable auxiliar funciona como una conexion entre los bancos de trabajo 
+**MOVWF AUXILIAR** Variable auxiliar funciona como una conexion entre los bancos de trabajo
 
 **COMF AUXILIAR,W** Esta variable trabaja de forma que donde el auxiliar tenga un 1 cambia a 0 , con esta intrucion realizamos el escaneo de los pines para saber cual esta activo y cual apagado
 
