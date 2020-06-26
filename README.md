@@ -288,9 +288,14 @@ Para las conexiones utilizamos el Diagrama Eléctrico del inciso 2.
 **5.	BIBLIOGRAFÍA**
 
 •	https://www.xataka.com/basics/que-arduino-como-funciona-que-puedes-hacer-uno
+
 •	http://www.iescamp.es/miarduino/2016/01/21/placa-arduino-uno/
+
 •	https://naylampmechatronics.com/microcontroladores/111-atmega328.html
+
 •	https://arduinobot.pbworks.com/f/Manual+Programacion+Arduino.pdf
+
 •	http://sherlin.xbot.es/microcontroladores/microcontroladores-de-gama-media/4-microcontrolador-pic-16f84
+
 •	https://www.ni.com/es-cr/shop/electronic-test-instrumentation/application-software-for-electronic-testand-instrumentation-category/what-is-multisim.html
 
