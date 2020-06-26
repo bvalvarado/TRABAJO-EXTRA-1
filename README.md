@@ -13,8 +13,7 @@ Los microcontroladores son circuitos integrados en los que se pueden grabar inst
 
 Partes de una placa ARDUINO UNO
 
-
-
+![](https://github.com/bvalvarado/TRABAJO-EXTRA-1/blob/master/Img/a1.jpg)
 
 **B.	MICROCONTROLADORES ATmega328 y  PIC16F84A.**
 
